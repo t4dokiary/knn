@@ -1,0 +1,82 @@
+% metodologia.tex
+
+\section{Metodologia} \label{sec:Metodologia}
+
+\begin{enumerate}
+    \item \textbf{Conversión de Datos Nominales a Numéricos}:
+    \begin{itemize}
+        \item Utilizaremos la base de datos GOLF y realizaremos la conversión de los datos nominales a datos numéricos.
+    \end{itemize}
+
+    \item \textbf{División de la Base de Datos}:
+    \begin{itemize}
+        \item Dividiremos la base de datos en dos subconjuntos: conjunto de entrenamiento y conjunto de prueba.
+        \item El conjunto de entrenamiento tendrá un tamaño de 10 elementos, mientras que el conjunto de prueba tendrá un tamaño de 4 elementos.
+        \item La selección de elementos se realizará de forma aleatoria.
+    \end{itemize}
+
+    \item \textbf{Clasificación para $K=3$, $K=5$ y $K=7$}:
+    \begin{itemize}
+        \item Utilizaremos el algoritmo KNN con diferentes valores de $K$ (3, 5 y 7) para clasificar uno de los 4 elementos del conjunto de prueba.
+        \item Realizaremos el mismo procedimiento para cada valor de $K$.
+    \end{itemize}
+
+    \item \textbf{Cálculo del Porcentaje de Eficiencia}:
+    \begin{itemize}
+        \item Después de clasificar los elementos del conjunto de prueba para cada valor de $K$, calcularemos el porcentaje de eficiencia de cada clasificación.
+    \end{itemize}
+
+    \item \textbf{Herramientas Utilizadas}:
+    \begin{itemize}
+        \item Para llevar a cabo este estudio, utilizaremos los siguientes módulos:
+        \begin{itemize}
+            \item \textit{NumPy}: para operaciones numéricas.
+            \item \textit{Pandas}: para manipulación y análisis de datos.
+            \item \textit{heapq}: para realizar operaciones de clasificación.
+        \end{itemize}
+        \item Además, convertiremos la base de datos a un archivo CSV para facilitar su manipulación y análisis.
+    \end{itemize}
+
+
+    \item \textbf{Etapas}:
+    \begin{itemize}
+
+        \item \textbf{Carga y Preprocesamiento de Datos}:
+        \begin{itemize}
+            \item Se utiliza la biblioteca Pandas para cargar los datos desde un archivo CSV denominado \texttt{golf.csv}.
+            \item La columna \texttt{"Unnamed: 7"}, si está presente, se elimina para evitar posibles conflictos en el análisis.
+        \end{itemize}
+
+        \item \textbf{Manipulación de Datos con NumPy}:
+        \begin{itemize}
+            \item Los datos cargados se convierten a un formato NumPy array para facilitar su manipulación y cálculos numéricos posteriores.
+            \item Se mezclan aleatoriamente los datos para evitar sesgos en el análisis y garantizar la aleatoriedad en la selección de datos de entrenamiento y prueba.
+        \end{itemize}
+
+        \item \textbf{División de Datos}:
+        \begin{itemize}
+            \item Se dividen los datos en dos conjuntos: un conjunto de entrenamiento y un conjunto de prueba.
+            \item El conjunto de entrenamiento contiene 10 instancias, mientras que el conjunto de prueba contiene 4 instancias.
+            \item Se elimina la columna de etiquetas de clase del conjunto de entrenamiento y prueba, ya que solo se necesita para la clasificación.
+        \end{itemize}
+
+        \item \textbf{Aplicación del Algoritmo KNN}:
+        \begin{itemize}
+            \item Se solicita al usuario el valor de $k$ que determinará la cantidad de vecinos más cercanos a considerar en el proceso de clasificación.
+            \item Para cada instancia en el conjunto de prueba, se calculan las distancias euclidianas respecto a todas las instancias del conjunto de entrenamiento.
+            \item Se identifican los $k$ vecinos más cercanos a partir de las distancias calculadas utilizando la estructura de datos \texttt{heapq}.
+            \item Se determina la clase de la instancia de prueba mediante un voto mayoritario entre las clases de los vecinos más cercanos.
+        \end{itemize}
+
+        \item \textbf{Resultados y Conclusiones}:
+        \begin{itemize}
+            \item Se muestra el resultado final de la clasificación para cada instancia del conjunto de prueba, indicando si se clasifica como \texttt{"Yes"} o \texttt{"No"} según el voto mayoritario.
+            \item El proceso se repite para diferentes valores de $k$ para evaluar la sensibilidad del modelo a este hiperparámetro.
+        \end{itemize}
+
+    \end{itemize}
+\end{enumerate}
+\textbf{BASE DE DATOS GOLF}:
+\begin{itemize}
+    \item La base de datos GOLF es una base de datos de ejemplo.
+\end{itemize}

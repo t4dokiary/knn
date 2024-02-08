@@ -1,0 +1,15 @@
+\babel@toc {spanish}{}\relax 
+\contentsline {section}{\numberline {1}Descripcion del Algoritmo}{2}{section.1}%
+\contentsline {section}{\numberline {2}Metodologia}{3}{section.2}%
+\contentsline {section}{\numberline {3}Entrenamiento del Modelo}{6}{section.3}%
+\contentsline {subsection}{\numberline {3.1}Tabla de Datos}{6}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.2}Datos aleatorios}{6}{subsection.3.2}%
+\contentsline {subsection}{\numberline {3.3}Datos de Entrenamiento}{7}{subsection.3.3}%
+\contentsline {section}{\numberline {4}Clasificación de Datos Desconocidos}{8}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Datos de Prueba}{8}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.2}3 menores valores}{9}{subsection.4.2}%
+\contentsline {subsection}{\numberline {4.3}5 menores valores}{9}{subsection.4.3}%
+\contentsline {subsection}{\numberline {4.4}7 menores valores}{10}{subsection.4.4}%
+\contentsline {section}{\numberline {5}Apendice}{11}{section.5}%
+\contentsline {subsection}{\numberline {5.1}Codigo Fuente}{11}{subsection.5.1}%
+\contentsline {subsection}{\numberline {5.2}Distancia Euclidiana}{11}{subsection.5.2}%
